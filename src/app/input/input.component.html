@@ -1,0 +1,60 @@
+<section id="section-input" class="section-content">
+  <form [formGroup]="inputForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="firstName">Ime</label>
+      <input id="firstName" class="form-control" formControlName="firstName"/>
+      <div class="div-error"*ngIf="
+          inputForm.get('firstName')?.invalid &&
+          inputForm.get('firstName')?.touched
+        "
+      >
+        <small class="alert">Ime ne smije biti prazno!</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Prezime</label>
+      <input id="lastName" class="form-control" formControlName="lastName" />
+      <div class="div-error"
+        *ngIf="
+          inputForm.get('lastName')?.invalid &&
+          inputForm.get('lastName')?.touched
+        "
+      >
+        <small class="alert">Prezime ne smije biti prazno!</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="dateOfBirth">Datum rođenja </label>
+      <input
+        id="dateOfBirth"
+        class="form-control"
+        formControlName="dateOfBirth"
+      />
+      <div class="div-error"
+        *ngIf="
+          inputForm.get('dateOfBirth')?.invalid &&
+          inputForm.get('dateOfBirth')?.touched
+        "
+      >
+        <small class="alert">Datum rođenja ne smije biti prazan!</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="jobTitle">Pozicija</label>
+      <input id="jobTitle" class="form-control" formControlName="jobTitle" />
+      <div class="div-error"
+        *ngIf="
+          inputForm.get('jobTitle')?.invalid &&
+          inputForm.get('jobTitle')?.touched
+        "
+      >
+        <small class="alert">Pozicija ne smije biti prazna!</small>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Spremi</button>
+  </form>
+</section>

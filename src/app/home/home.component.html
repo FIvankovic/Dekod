@@ -1,0 +1,45 @@
+<section>
+<div class="search-container">
+<form (ngSubmit)="onSearch()" class="search-form">
+  <div class="form-group">
+    <label for="search">Tražilica</label>
+    <input
+      id="search"
+      class="form-control input-search"
+      [(ngModel)]="searchTerm"
+      name="search"
+      placeholder="Pretraži zaposlenike..."
+    />
+  </div>
+  <div id="div-searchBtn">
+    <button type="submit" class="btn btn-primary">Pretraži</button>
+  </div>
+</form>
+</div>
+<div id="table-container" class="column gap-1">
+  <div class="container-fluid">
+    <table class="table table-striped" *ngIf="filteredEmployees.length > 0; else noData">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Ime</th>
+          <th scope="col">Prezime</th>
+          <th scope="col">Pozicija</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of filteredEmployees">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.firstName }}</td>
+          <td>{{ employee.lastName }}</td>
+          <td>{{ employee.jobTitle }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <ng-template #noData>
+      <p class="p-noData">Zaposlenici nisu pronađeni. Provjerite povezanost na API.</p>
+    </ng-template>
+  </div>
+  <!-- Paginator -->
+</div>
+</section>
