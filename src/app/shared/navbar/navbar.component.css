@@ -1,0 +1,16 @@
+nav{
+    top: 0;
+}
+.navbar{
+    position: sticky !important;
+    display: flex;
+    z-index: 999;
+    width: 100%;
+    border-bottom: 2px solid #1c1c1c;
+    background-color:#2e2e2e !important;
+    background-image: url("../../assets/img/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../assets/img/overlay.png");
+}
+.nav-link{
+    text-shadow: 1px 2px 3px rgb(0, 0, 0);
+    font-size: 18px;
+}

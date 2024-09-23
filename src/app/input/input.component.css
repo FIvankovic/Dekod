@@ -1,0 +1,46 @@
+.alert{
+    color: red;
+    font-weight: bold;
+
+}
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  padding-bottom: 150px;
+}
+form{
+    background-color: white;
+    padding: 32px;
+    border-radius: 20px;
+    overflow: hidden;
+    -webkit-box-shadow: 9px 8px 5px 1px rgba(0,0,0,0.55);
+    -moz-box-shadow: 9px 8px 5px 1px rgba(0,0,0,0.55);
+    box-shadow: 9px 8px 5px 1px rgba(0,0,0,0.55);
+}
+label{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.form-group{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px; /* Space between input and error message */
+    padding-bottom: 40px;
+}
+.form-group div {
+    grid-column: 1 / -1; /* Span full width */
+  }
+  
+#section-input{
+    background: #000000 url("../assets/img/Poly\ Pattern\ -Blue.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
